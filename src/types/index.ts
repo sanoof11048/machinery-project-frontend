@@ -5,9 +5,11 @@ export interface Product {
   image: string;
   shortDescription: string;
   fullDescription: string;
+  description:string;
   features: string[];
   applications: string[];
   tonnage?: string;
+  price:number;
   capacity?: string;
   energyRating: string;
   availableUpgrades: string[];
