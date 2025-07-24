@@ -12,7 +12,7 @@ const Footer = () => {
                 <span className="font-bold text-lg">OIG</span>
               </div>
               <div>
-                <h3 className="text-lg font-bold">Orix International Group</h3>
+                <h3 className="text-lg font-bold">Essar Enterprises</h3>
                 <p className="text-sm text-gray-400">Industrial Machinery Solutions</p>
               </div>
             </div>
@@ -117,16 +117,16 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="text-emerald-400 mt-1" size={16} />
                 <div>
-                  <div className="text-gray-300">+91 9847755707</div>
-                  <div className="text-gray-300">+91 9847755707</div>
+                  <div className="text-gray-300">+91 7907805626</div>
+                  <div className="text-gray-300">+91 7907805626</div>
                 </div>
               </div>
               
               <div className="flex items-start space-x-3">
                 <Mail className="text-cyan-400 mt-1" size={16} />
                 <div>
-                  <div className="text-gray-300">info@orixinternational.com</div>
-                  <div className="text-gray-300">sales@orixinternational.com</div>
+                  <div className="text-gray-300">info@essarenterprises.com</div>
+                  <div className="text-gray-300">sales@essarenterprises.com</div>
                 </div>
               </div>
               
@@ -145,7 +145,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Orix International Group. All rights reserved.
+              © 2024 Essar Enterprises. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200">

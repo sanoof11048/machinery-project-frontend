@@ -50,8 +50,8 @@ const ContactSection = () => {
                   <Phone className="text-emerald-600 mt-1" size={20} />
                   <div>
                     <div className="font-semibold text-gray-800">Phone</div>
-                    <div className="text-gray-600">+91 9847755707</div>
-                    <div className="text-gray-600">+91 9847755707</div>
+                    <div className="text-gray-600">+91 7907805626</div>
+                    <div className="text-gray-600">+91 7907805626</div>
                   </div>
                 </div>
                 
@@ -59,8 +59,8 @@ const ContactSection = () => {
                   <Mail className="text-cyan-600 mt-1" size={20} />
                   <div>
                     <div className="font-semibold text-gray-800">Email</div>
-                    <div className="text-gray-600">info@orixinternational.com</div>
-                    <div className="text-gray-600">sales@orixinternational.com</div>
+                    <div className="text-gray-600">info@essarenterprises.com</div>
+                    <div className="text-gray-600">sales@essarenterprises.com</div>
                   </div>
                 </div>
                 

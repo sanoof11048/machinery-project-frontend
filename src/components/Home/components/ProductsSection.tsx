@@ -120,6 +120,16 @@ const ProductsSection = () => {
           </div>
         )}
       </div>
+      {/* Enhanced CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4 justify-center mt-10">
+            <button
+          onClick={()=>navigate('/products')}
+          className="relative bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-8 py-3 rounded-full font-bold hover:shadow-2xl hover:shadow-emerald-500/30 transition-all duration-300 hover:scale-105 overflow-hidden group">
+              <span className="relative z-10">Browse More Products</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
+            </button>
+          </div>
     </section>
   );
 };

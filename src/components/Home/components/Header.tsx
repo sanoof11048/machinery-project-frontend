@@ -31,16 +31,16 @@ const Header = () => {
       {/* Top Info Bar with Gradient */}
       <div className="bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-600 text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="flex justify-between items-center text-sm py-3">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-0 relative">
+          <div className="flex justify-between items-center text-sm py-1">
             <div className="flex items-center space-x-8">
               <div className="flex items-center space-x-2 group">
                 <Phone size={16} className="text-emerald-200 group-hover:text-white transition-colors" />
-                <span className="font-medium">+91 9847755707</span>
+                <span className="font-medium">+91 7907805626</span>
               </div>
               <div className="flex items-center space-x-2 group">
                 <Mail size={16} className="text-emerald-200 group-hover:text-white transition-colors" />
-                <span className="font-medium">info@orixinternational.com</span>
+                <span className="font-medium">info@essarenterprises.com</span>
               </div>
               <div className="hidden lg:flex items-center space-x-2 group">
                 <MapPin size={16} className="text-emerald-200 group-hover:text-white transition-colors" />
@@ -68,7 +68,8 @@ const Header = () => {
             </div>
             <div className="ml-4">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-500 to-gray-400 bg-clip-text text-transparent">
-                Orix International Group
+                {/* Essar <span className='hidden md:inline'>Enterprises</span> */}
+                Essar Enterprises
               </h1>
               {/* <p className="text-sm text-emerald-600 font-semibold">Industrial Machinery Solutions</p> */}
             </div>
@@ -104,10 +105,10 @@ const Header = () => {
 
           {/* Enhanced Mobile Menu Button */}
           <button
-            className="lg:hidden relative p-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 transition-colors duration-200"
+            className="lg:hidden relative p-1 rounded-xl bg-transparent transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <div className="relative w-6 h-6">
+            <div className="relative w-6 h-6 ">
               <span className={`absolute block w-6 h-0.5 bg-emerald-600 transform transition-all duration-300 ${
                 isMenuOpen ? 'rotate-45 top-3' : 'top-1'
               }`}></span>
@@ -123,7 +124,7 @@ const Header = () => {
 
         {/* Enhanced Mobile Navigation */}
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'min-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="py-6 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl m-4 shadow-xl">
             <nav className="flex flex-col space-y-2 px-6">

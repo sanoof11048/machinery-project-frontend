@@ -87,7 +87,7 @@ const OruxWebsite = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
               <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                ORIX INTERNATIONAL
+                Essar Enterprises
               </h1>
             </div>
             
@@ -157,7 +157,7 @@ const OruxWebsite = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
               About{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                Orix International Group
+                Essar Enterprises
               </span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -175,7 +175,7 @@ const OruxWebsite = () => {
               <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
                 <p>
                   With over 15 years of experience in the industrial machinery sector, 
-                  Orix International Group has established itself as a trusted supplier 
+                  Essar Enterprises has established itself as a trusted supplier 
                   of high-quality used industrial equipment. We specialize in injection 
                   molding machines, CNC equipment, blow molding machines, and comprehensive 
                   retrofitting services.

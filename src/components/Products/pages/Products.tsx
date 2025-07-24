@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { Search, Filter, Grid, List, Star, Heart, Eye, ArrowRight, Zap, Award, Settings, Wrench, ChevronDown, X, Plus,  Truck, Shield } from 'lucide-react';
+import { Search, Filter, Grid, List, Star, Heart, Eye, ArrowRight, Zap, Award, Settings, Wrench, ChevronDown, X, Plus, Truck, Shield } from 'lucide-react';
 import { useProductContext } from '../../../context/ProductContext';
 
 
@@ -15,7 +15,7 @@ const sortOptions = [
 ];
 
 const ProductsPage = () => {
-  const { products } = useProductContext();
+  const { products, loading } = useProductContext();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [sortBy, setSortBy] = useState("name");
@@ -106,8 +106,8 @@ const ProductsPage = () => {
         {/* Energy Rating */}
         <div className="absolute top-4 right-4">
           <div className={`px-3 py-2 rounded-full text-xs font-bold shadow-lg backdrop-blur-sm ${product.energyRating === 'A+' ? 'bg-emerald-500/90 text-white' :
-              product.energyRating === 'A' ? 'bg-emerald-400/90 text-white' :
-                'bg-yellow-400/90 text-gray-800'
+            product.energyRating === 'A' ? 'bg-emerald-400/90 text-white' :
+              'bg-yellow-400/90 text-gray-800'
             }`}>
             ⚡ {product.energyRating}
           </div>
@@ -235,8 +235,8 @@ const ProductsPage = () => {
           />
           <div className="absolute top-3 right-3">
             <div className={`px-2 py-1 rounded-full text-xs font-bold backdrop-blur-sm ${product.energyRating === 'A+' ? 'bg-emerald-500/90 text-white' :
-                product.energyRating === 'A' ? 'bg-emerald-400/90 text-white' :
-                  'bg-yellow-400/90 text-gray-800'
+              product.energyRating === 'A' ? 'bg-emerald-400/90 text-white' :
+                'bg-yellow-400/90 text-gray-800'
               }`}>
               ⚡ {product.energyRating}
             </div>
@@ -305,8 +305,8 @@ const ProductsPage = () => {
               <button
                 onClick={() => toggleCompare(product.id)}
                 className={`px-4 py-2 rounded-xl font-semibold transition-all duration-200 ${compareList.has(product.id)
-                    ? 'bg-emerald-500 text-white'
-                    : 'bg-emerald-100 text-emerald-600 hover:bg-emerald-200'
+                  ? 'bg-emerald-500 text-white'
+                  : 'bg-emerald-100 text-emerald-600 hover:bg-emerald-200'
                   }`}
               >
                 {compareList.has(product.id) ? 'Added' : 'Compare'}
@@ -350,8 +350,8 @@ const ProductsPage = () => {
                   />
                   <div className="absolute top-4 right-4">
                     <div className={`px-3 py-2 rounded-full text-sm font-bold backdrop-blur-sm ${product.energyRating === 'A+' ? 'bg-emerald-500/90 text-white' :
-                        product.energyRating === 'A' ? 'bg-emerald-400/90 text-white' :
-                          'bg-yellow-400/90 text-gray-800'
+                      product.energyRating === 'A' ? 'bg-emerald-400/90 text-white' :
+                        'bg-yellow-400/90 text-gray-800'
                       }`}>
                       ⚡ {product.energyRating}
                     </div>
@@ -394,12 +394,12 @@ const ProductsPage = () => {
                 <div className="bg-gray-50 p-6 rounded-2xl">
                   <h4 className="font-bold text-gray-800 mb-4">Technical Specifications</h4>
                   <div className="grid grid-cols-1 gap-3">
-{Object.entries(product.specifications).map(([key, value]) => (
-  <div key={key} className="flex justify-between py-2 border-b border-gray-200 last:border-0">
-    <span className="text-gray-600">{key}</span>
-    <span className="font-medium text-gray-800">{value as string}</span>
-  </div>
-))}
+                    {Object.entries(product.specifications).map(([key, value]) => (
+                      <div key={key} className="flex justify-between py-2 border-b border-gray-200 last:border-0">
+                        <span className="text-gray-600">{key}</span>
+                        <span className="font-medium text-gray-800">{value as string}</span>
+                      </div>
+                    ))}
 
 
                   </div>
@@ -439,10 +439,10 @@ const ProductsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/50">
+    <div className="pt-5 min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50/30 to-teal-50/50">
       {/* Enhanced Hero Section */}
-      <div className="relative bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-800 text-white overflow-hidden">
-        {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg%3E%3Cg" fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div> */}
+      <div className="relative pt-10 bg-gradient-to-r from-emerald-900 via-emerald-800 to-teal-800 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="text-center">
@@ -695,7 +695,9 @@ const ProductsPage = () => {
             </div>
           </div>
         </div>
-
+            {loading&&(
+              <>Loading...</>
+            )}
         {/* Products Grid/List */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -742,7 +744,7 @@ const ProductsPage = () => {
 
         {/* Enhanced CTA Section */}
         <div className="mt-20 bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-600 rounded-3xl p-12 text-white text-center relative overflow-hidden">
-          {/* <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Cpath d="M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z"/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div> */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Cpath%20d%3D%22M20%2020c0-5.5-4.5-10-10-10s-10%204.5-10%2010%204.5%2010%2010%2010%2010-4.5%2010-10zm10%200c0-5.5-4.5-10-10-10s-10%204.5-10%2010%204.5%2010%2010%2010%2010-4.5%2010-10z%22/%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
           <div className="relative">
             <h3 className="text-4xl font-bold mb-4">Can't Find What You're Looking For?</h3>

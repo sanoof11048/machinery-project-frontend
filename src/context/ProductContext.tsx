@@ -46,6 +46,9 @@ export const ProductProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     // fetchProducts();
     setProducts(mockProducts)
+    if(products){
+        setLoading(false)
+    }
   }, []);
 
   const selectProduct = (product: Product) => setSelectedProduct(product);
