@@ -23,12 +23,14 @@ const Header = () => {
   }, []);
 
   return (
+    
     <header className={`fixed w-full top-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-emerald-50 backdrop-blur-xl shadow-2xl shadow-emerald-500/10' 
         : 'bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md'
     }`}>
       {/* Top Info Bar with Gradient */}
+      {!isScrolled && (
       <div className="bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-600 text-white overflow-hidden relative">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-0 relative">
@@ -54,7 +56,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-
+      )}
+      
       {/* Main Header */}
       <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
