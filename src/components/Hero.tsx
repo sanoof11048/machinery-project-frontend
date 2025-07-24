@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Users, Award, Settings } from 'lucide-react';
+import { ArrowRight, CheckCircle, Award, Settings } from 'lucide-react';
 
 const Hero = () => {
     const scrollToSection = (sectionId:any) => {

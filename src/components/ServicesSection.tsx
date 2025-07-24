@@ -1,4 +1,3 @@
-import React from 'react';
 import { Settings, Wrench, Package, Play, GraduationCap, Search } from 'lucide-react';
 
 const ServicesSection = () => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowLeft, CheckCircle, Settings, Award, Phone } from 'lucide-react';
 import type { Product } from '../types';
 

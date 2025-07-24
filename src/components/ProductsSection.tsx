@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Filter, Search, ArrowRight } from 'lucide-react';
 import type { Product } from '../types';
 

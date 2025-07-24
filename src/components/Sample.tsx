@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import { 
-  ArrowRight, 
+   
   CheckCircle, 
   Users, 
-  Award, 
+   
   Settings, 
   Target, 
   Eye, 
   Wrench,
   Zap,
   Cog,
-  Shield,
+  
   Menu,
   X
 } from 'lucide-react';

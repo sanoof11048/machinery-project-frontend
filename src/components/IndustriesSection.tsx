@@ -1,4 +1,3 @@
-import React from 'react';
 import { Factory, Pill, Car, Package, Zap, Cog } from 'lucide-react';
 
 const IndustriesSection = () => {
